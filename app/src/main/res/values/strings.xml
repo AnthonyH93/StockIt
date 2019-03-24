@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">StockIt</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Employees</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="btnOSC">Shelf Check</string>
+    <string name="btnED">Employee Data</string>
+    <string name="btnNC">Notification Center</string>
+
+</resources>
