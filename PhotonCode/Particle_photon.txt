@@ -1,0 +1,53 @@
+
+// This #include statement was automatically added by the Particle IDE.
+#include <HC-SR04.h>
+
+// This #include statement was automatically added by the Particle IDE.
+#include <HttpClient.h>
+
+
+#include "application.h"
+
+
+HttpClient http;
+http_header_t headers[] = {
+    {"Content-Type", "application/json"},
+    {"Host", "http://bc6b65ec.ngrok.io/stockits/"},
+    {NULL, NULL}
+};
+
+http_request_t request;
+http_response_t response;
+
+    
+
+// trigger / echo pins
+const int triggerPin = A0;
+const int echoPin = D0;
+HC_SR04 rangefinder = HC_SR04(triggerPin, echoPin);
+
+void setup()
+{
+    Serial.begin(9600);
+    rangefinder.init();
+    request.port = 3000;
+}
+
+void loop()
+{
+    float cm = rangefinder.distCM();
+    
+    if (cm > 40){
+        Postrequest();
+    delay(50);
+    }
+}
+
+void Postrequest(){
+   
+   request.path= "/edit/5c974b7e2f02264964e672e5";  
+   request.body = "{\"id\": \"5c974b7e2f02264964e672e5\",\"aisle\":3,\"product\":\"milk\",\"state\":\"empty\"}";  
+   http.post(request, response, headers);
+   Particle.publish("METHOD", String(response.status)); 
+   
+}
