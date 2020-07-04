@@ -17,6 +17,6 @@ Hardware used: Photon wifi kit
                Ultrasonic sensor to detect empty shelves
 
 The github repo is arranged as 3 portions
-  1. The javascript server folder
-  2. The photon code hardware integration folder
+  1. The javascript server folder (titled JSServer)
+  2. The photon code hardware integration folder (titled PhotonCode)
   3. The app files (rest of the files aside from the above folders)
