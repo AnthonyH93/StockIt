@@ -2,11 +2,11 @@
 
 Repository for the "Vaguely Generic" team competing in NewHacks2019 under the category of IOT.
 
-### Team members
+### Team Members
 
 Anthony Hopkins, David Lu, Chintan Mistry, Rushil Patel
 
-NewHacks 2019 IEEE Student Branch University of Toronto - March 23-24 
+NewHacks 2019 IEEE Student Branch University of Toronto - March 23-24 2019
 
 ### About
 
